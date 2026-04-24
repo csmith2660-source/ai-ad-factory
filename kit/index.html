@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Live Demo Kit · The AI Ad Factory</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html, body { margin: 0; padding: 0; background: var(--ao-bg); color: var(--ao-text); font-family: var(--ao-sans); min-height: 100vh; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 56px 24px 80px; }
+  .eyebrow { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--ao-accent); margin-bottom: 20px; }
+  h1 { font-family: var(--ao-serif); font-weight: 400; font-size: 56px; line-height: 1.02; margin: 0 0 20px; letter-spacing: -0.01em; }
+  h1 em { font-style: normal; color: var(--ao-accent); }
+  .lede { color: var(--ao-muted); font-size: 18px; line-height: 1.5; margin: 0 0 40px; }
+  .section-head { display:flex; align-items:baseline; gap: 14px; margin: 36px 0 16px; }
+  .section-head .num { font-family: var(--ao-serif); font-size: 40px; color: var(--ao-accent); line-height: 1; }
+  .section-head .label { font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ao-accent); }
+  a.file {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 20px 24px; margin-bottom: 12px;
+    background: var(--ao-surface); border: 1px solid var(--ao-border); border-radius: 14px;
+    color: var(--ao-text); text-decoration: none;
+    transition: border-color .15s, background .15s, transform .15s;
+  }
+  a.file:hover { border-color: var(--ao-accent); background: rgba(249,115,22,.06); }
+  a.file:active { transform: scale(.99); }
+  a.file .title { font-family: var(--ao-serif); font-size: 22px; line-height: 1.15; }
+  a.file .meta { color: var(--ao-dim); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+  a.file .arrow { color: var(--ao-accent); font-family: var(--ao-serif); font-size: 28px; }
+  .flame { display:inline-block; width: 8px; height: 8px; background: var(--ao-accent); border-radius: 50%; margin-right: 10px; vertical-align: middle; }
+  .back { color: var(--ao-dim); text-decoration: none; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+  .back:hover { color: var(--ao-muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">The AI Ad Factory</div>
+    <h1>The <em>Live Demo Kit.</em></h1>
+    <p class="lede">Every prompt, skill, and reference from the live demo. Tap to download and run alongside.</p>
+
+    <div class="section-head"><span class="num">01</span><span class="label">Deep Research</span></div>
+    <a class="file" href="files/deep-research-prompt.md" download>
+      <div><div class="title"><span class="flame"></span>Deep research prompt</div><div class="meta">.md · Download</div></div>
+      <span class="arrow">↓</span>
+    </a>
+
+    <div class="section-head"><span class="num">02</span><span class="label">Matrix &amp; Briefs · Manus</span></div>
+    <a class="file" href="files/skill.md" download>
+      <div><div class="title"><span class="flame"></span>Skill file</div><div class="meta">.md · Download</div></div>
+      <span class="arrow">↓</span>
+    </a>
+    <a class="file" href="files/manus-prompt.md" download>
+      <div><div class="title"><span class="flame"></span>Manus prompt</div><div class="meta">.md · Download</div></div>
+      <span class="arrow">↓</span>
+    </a>
+    <a class="file" href="files/copywriting-reference.md" download>
+      <div><div class="title"><span class="flame"></span>Copywriting reference</div><div class="meta">.md · Download</div></div>
+      <span class="arrow">↓</span>
+    </a>
+    <a class="file" href="files/visual-format-library.md" download>
+      <div><div class="title"><span class="flame"></span>Visual format library</div><div class="meta">.md · Download</div></div>
+      <span class="arrow">↓</span>
+    </a>
+
+    <div style="margin-top: 48px;"><a class="back" href="../">← Back to deck</a></div>
+  </div>
+</body>
+</html>
