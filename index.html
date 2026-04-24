@@ -8,7 +8,7 @@
   html, body { margin: 0; padding: 0; background: #000; }
   deck-stage { background: #000; }
 
-  /* Slide frame — every slide child of deck-stage sits on this */
+  /* Slide frame, every slide child of deck-stage sits on this */
   .slide {
     background: var(--ao-bg);
     color: var(--ao-text);
@@ -24,7 +24,7 @@
   .pad-slide { padding: 100px 120px 80px; }
   .pad-slide-lg { padding: 120px 140px 100px; }
 
-  /* Corner glow — used sparingly on hero / big moments */
+  /* Corner glow, used sparingly on hero / big moments */
   .glow-tr::before {
     content: ''; position: absolute; top: -260px; right: -260px;
     width: 900px; height: 900px;
@@ -120,7 +120,7 @@
   .slide-chrome-top .right { color: var(--ao-dim); }
   .slide-chrome-top .right em { font-style: normal; color: var(--ao-accent); font-family: var(--ao-serif); text-transform: none; letter-spacing: -0.005em; font-size: 18px; margin-right: 8px; }
 
-  /* Ad preview cards (case-study slides) — locked 4:5 aspect, driven by width. flex-shrink:0 so flex-parent can't squish the height. */
+  /* Ad preview cards (case-study slides), locked 4:5 aspect, driven by width. flex-shrink:0 so flex-parent can't squish the height. */
   .ad-card {
     width: 100%;
     aspect-ratio: 4 / 5;
@@ -148,26 +148,26 @@
 
 <script type="application/json" id="speaker-notes">
 [
-  "Hey everyone. We're going to spend the next few minutes on what I'm calling the AI Ad Factory — a way of generating static ads at scale that actually perform. The thesis is simple: volume doesn't win anymore, diversity does. I'll walk you through the framework, the filter I use to kill bad concepts fast, and the exact workflow that turns one brand into ninety unique ad concepts.",
-  "Let's start with why most brands are stuck. The instinct when an ad stops working is to make more ads. But that doesn't solve the problem — it usually makes it worse. Meta now actively penalizes creative similarity; if your ads look and feel the same, the algorithm treats them as one. Your audience sees six thousand ads a day, so repetitive creative gets scrolled past. And every dollar you spend scaling a tired concept is a dollar bidding against yourself. The answer isn't more ads. It's more different ads.",
-  "So what do I actually mean by creative diversity? Five dimensions. If you change any one of these, you've made a genuinely different ad. Product — the SKU, the offer. Persona — who you're talking to. Angle — the false belief you're challenging. Awareness — where they are in the journey. And format — how the ad actually looks. Change one, you have a new ad. Change two, you have a completely different one.",
-  "When you cross-multiply those five dimensions, the math does something interesting. One product, two personas, three angles, three awareness levels, five formats — that's ninety unique ad concepts from a single SKU. This is the matrix. It's not a brainstorm; it's a combinatorial tree. And this is why AI is actually useful here — the tree is too big to fill by hand, but it's exactly the kind of structured generation LLMs are good at.",
+  "Hey everyone. We're going to spend the next few minutes on what I'm calling the AI Ad Factory, a way of generating static ads at scale that actually perform. The thesis is simple: volume doesn't win anymore, diversity does. I'll walk you through the framework, the filter I use to kill bad concepts fast, and the exact workflow that turns one brand into ninety unique ad concepts.",
+  "Let's start with why most brands are stuck. The instinct when an ad stops working is to make more ads. But that doesn't solve the problem, it usually makes it worse. Meta now actively penalizes creative similarity; if your ads look and feel the same, the algorithm treats them as one. Your audience sees six thousand ads a day, so repetitive creative gets scrolled past. And every dollar you spend scaling a tired concept is a dollar bidding against yourself. The answer isn't more ads. It's more different ads.",
+  "So what do I actually mean by creative diversity? Five dimensions. If you change any one of these, you've made a genuinely different ad. Product, the SKU, the offer. Persona, who you're talking to. Angle, the false belief you're challenging. Awareness, where they are in the journey. And format, how the ad actually looks. Change one, you have a new ad. Change two, you have a completely different one.",
+  "When you cross-multiply those five dimensions, the math does something interesting. One product, two personas, three angles, three awareness levels, five formats, that's ninety unique ad concepts from a single SKU. This is the matrix. It's not a brainstorm; it's a combinatorial tree. And this is why AI is actually useful here, the tree is too big to fill by hand, but it's exactly the kind of structured generation LLMs are good at.",
   "Here's what six cells of the matrix look like filled in, for a real brand called The Professional Builder. Notice that every row has a different persona, a different angle, different awareness level, different format. None of these ads compete with each other. Meta's algorithm sees six distinct creative signals, not six variations of the same thing. This is the shape of a portfolio that scales.",
-  "Let me show you the matrix in action on The Professional Builder. Same product. Three completely different ads. Different persona, different angle, different format. The Stuck Builder gets a lifestyle hero — you're fully booked, so why aren't you making money? The Confident Operator gets a stat block showing the member cohort average — eight hours bought back, thirty-one percent profit lift. The Growth-Minded Owner gets a testimonial overlay with a named builder hitting twenty-five percent gross margin. Three ads, zero overlap, one product.",
-  "A second brand, same mechanic. Mott & Bow sells one thing — heritage jeans — but three completely different ads. The Heritage Shopper gets the forty-years-of-craft product story. The Capsule Wardrobe Planner gets the one-jean-every-outfit grid. The Skeptical Buyer gets a two-year-wear review. Three personas, three angles, three formats, one product. The matrix holds up across categories.",
-  "A third brand — Pawable, a collagen supplement for aging dogs. Same mechanic. Three concepts, three different ways in. The Worried Pet Parent sees the problem agitation — your dog is slowing down, it's not just age, it's collagen decline. The Hopeful Owner sees a transformation testimonial — Christine's dog back at the beach, five stars. The Skeptical Researcher sees the proof stack — 1,777 reviews, 4.8 stars, vet recommended, 90-day guarantee. Same supplement. Three completely different ways in.",
-  "Here's the reveal. Everything you just saw — three brands, nine ads, all of it — done end-to-end by AI. Research, matrix, briefs, statics. Zero hands on any of it. Now let me show you the system that gets you there.",
+  "Let me show you the matrix in action on The Professional Builder. Same product. Three completely different ads. Different persona, different angle, different format. The Stuck Builder gets a lifestyle hero, you're fully booked, so why aren't you making money? The Confident Operator gets a stat block showing the member cohort average, eight hours bought back, thirty-one percent profit lift. The Growth-Minded Owner gets a testimonial overlay with a named builder hitting twenty-five percent gross margin. Three ads, zero overlap, one product.",
+  "A second brand, same mechanic. Mott & Bow sells one thing, heritage jeans, but three completely different ads. The Heritage Shopper gets the forty-years-of-craft product story. The Capsule Wardrobe Planner gets the one-jean-every-outfit grid. The Skeptical Buyer gets a two-year-wear review. Three personas, three angles, three formats, one product. The matrix holds up across categories.",
+  "A third brand, Pawable, a collagen supplement for aging dogs. Same mechanic. Three concepts, three different ways in. The Worried Pet Parent sees the problem agitation, your dog is slowing down, it's not just age, it's collagen decline. The Hopeful Owner sees a transformation testimonial, Christine's dog back at the beach, five stars. The Skeptical Researcher sees the proof stack, 1,777 reviews, 4.8 stars, vet recommended, 90-day guarantee. Same supplement. Three completely different ways in.",
+  "Here's the reveal. Everything you just saw, three brands, nine ads, all of it, done end-to-end by AI. Research, matrix, briefs, statics. Zero hands on any of it. Now let me show you the system that gets you there.",
   "Here's the system. Five steps, each engineered with the right context. Research → Matrix → Briefs → Images → Ship. This is what we're about to run live.",
-  "Before the live build, a quick map of the landscape. Five tools, laid out in pipeline order — research, strategy, creative — then the two that can run the whole line. You don't need all of them. You need to know which slice you're trying to get leverage on. The one highlighted on the right — Claude Code — is what we build as a service for brands.",
+  "Before the live build, a quick map of the landscape. Five tools, laid out in pipeline order, research, strategy, creative, then the two that can run the whole line. You don't need all of them. You need to know which slice you're trying to get leverage on. The one highlighted on the right, Claude Code, is what we build as a service for brands.",
   "Start of the pipeline: Deep Research. Claude and ChatGPT both ship agentic research modes now. You hand it a brand URL and a prompt, walk away for fifteen minutes, come back to a cited synthesis that would've taken a researcher a full day. This replaces the 'stare at Trustpilot for two hours' step. Best for step one: brand intelligence.",
-  "Then strategy — Poppy AI. If you think visually, this is your briefing tool. An infinite canvas where you drop in reviews, competitor ads, transcripts, customer interviews — and the AI reasons across all of it at once. It's not a chat; it's a whiteboard with a brain. Best for the fuzzy middle step: turning a pile of evidence into a sharp brief.",
-  "Creative — Higgsfield. When the bar is higher than 'good enough.' A creative suite covering image, video, and motion — character consistency across hundreds of variations, cinematic camera control, product compositing that actually looks lit. Best for the generation step when your brand needs production-value visuals, not just renders.",
+  "Then strategy, Poppy AI. If you think visually, this is your briefing tool. An infinite canvas where you drop in reviews, competitor ads, transcripts, customer interviews, and the AI reasons across all of it at once. It's not a chat; it's a whiteboard with a brain. Best for the fuzzy middle step: turning a pile of evidence into a sharp brief.",
+  "Creative, Higgsfield. When the bar is higher than 'good enough.' A creative suite covering image, video, and motion, character consistency across hundreds of variations, cinematic camera control, product compositing that actually looks lit. Best for the generation step when your brand needs production-value visuals, not just renders.",
   "Manus. The first of two tools that can run the whole pipeline. It's an autonomous agent that plans, runs tools, and delivers. You hand it a brief, it comes back with research, matrix, copy, and statics. It's the closest off-the-shelf thing to 'one prompt, ninety ads' that actually works today.",
-  "And Claude Code — the build-your-own path, and the one we build as a service for brands at Ad Oven. When off-the-shelf runs out of road, you build a pipeline shaped exactly to your brand. Your agents, your prompts, your tools — versioned, shareable, and owned by you. The ceiling stops being a product roadmap and starts being an engineer. This is what we're about to do live.",
+  "And Claude Code, the build-your-own path, and the one we build as a service for brands at Ad Oven. When off-the-shelf runs out of road, you build a pipeline shaped exactly to your brand. Your agents, your prompts, your tools, versioned, shareable, and owned by you. The ceiling stops being a product roadmap and starts being an engineer. This is what we're about to do live.",
   "Before we build, your turn. I put the same framework into a tool you can run on your own account right now. Go to creative-diversity-audit.fly.dev, log in with 'audit' and 'Nashville2026', and connect your Meta ads. It scores your current spend across the same five dimensions and tells you which cells of the matrix you're starving. Read-only, five minutes. Leave it running in a tab while I build.",
-  "Before I start building, grab the kit. Every prompt, skill, and reference I'm about to use is right here — click any of them to download. Step 01 is the deep research prompt. Step 02 is the skill file, Manus prompt, copywriting reference, and visual format library. Pull them up on your laptop and follow along.",
-  "This is the part where I stop showing slides and start building. From a blank slate — the whole pipeline, live. Research, matrix, briefs, statics. Should take about [X] minutes. Questions hold until the end.",
-  "Open floor — what do you want to dig into? If you want to talk shop about what this looks like for your own brand after, grab me."
+  "Before I start building, grab the kit. Every prompt, skill, and reference I'm about to use is right here, click any of them to download. Step 01 is the deep research prompt. Step 02 is the skill file, Manus prompt, copywriting reference, and visual format library. Pull them up on your laptop and follow along.",
+  "This is the part where I stop showing slides and start building. From a blank slate, the whole pipeline, live. Research, matrix, briefs, statics. Should take about [X] minutes. Questions hold until the end.",
+  "Open floor, what do you want to dig into? If you want to talk shop about what this looks like for your own brand after, grab me."
 ]
 </script>
   <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
@@ -206,7 +206,7 @@
     </div>
     <div style="flex:1; display:grid; grid-template-columns: 1fr 1fr; align-items:center; gap: 120px; padding: 80px 140px 100px;">
 
-      <!-- LEFT — portrait -->
+      <!-- LEFT, portrait -->
       <div style="position:relative; aspect-ratio: 1/1; width: 100%; max-width: 620px; justify-self:end;">
         <!-- Offset frame accent -->
         <div style="position:absolute; inset: 28px -28px -28px 28px; border: 1px solid var(--ao-accent); pointer-events:none;"></div>
@@ -218,14 +218,14 @@
         </div>
       </div>
 
-      <!-- RIGHT — intro copy -->
+      <!-- RIGHT, intro copy -->
       <div style="max-width: 680px;">
         <div class="eyebrow-sm" style="margin-bottom: 28px;">Hello</div>
         <h2 class="h-sub" style="font-size: 120px; line-height: 0.92; margin: 0 0 48px 0;">
           I'm <em>Colin.</em>
         </h2>
         <p class="body-md" style="font-size: 26px; line-height: 1.45; color: var(--ao-text); margin: 0 0 28px 0; text-wrap: pretty;">
-          I help brands and agencies scale on Meta with <em style="color: var(--ao-accent); font-style: normal;">better ad creative</em> — faster, more diverse, and actually tuned to the algorithm.
+          I help brands and agencies scale on Meta with <em style="color: var(--ao-accent); font-style: normal;">better ad creative</em>, faster, more diverse, and actually tuned to the algorithm.
         </p>
         <p class="body-md" style="font-size: 17px; line-height: 1.5; color: var(--ao-muted); margin: 0;">
           Today I'm going to show you the system we use to do it.
@@ -406,40 +406,40 @@
           { id:'W4', label:'Product aware',  hue:'#f97316' },
           { id:'W5', label:'Most aware',     hue:'#f97316' },
         ],
-        // Visual formats — general templates used across brands.
+        // Visual formats, general templates used across brands.
         // Mapped to awareness based on what each format is best at doing.
         // Repeats are intentional: some formats (UGC video still, testimonial
         // overlay) genuinely work across multiple levels.
         formatsByAwareness: {
-          W1: [ // Unaware — stop the scroll, look native, feel like content
+          W1: [ // Unaware, stop the scroll, look native, feel like content
             { id:'F-hero',   label:'Hero image + headline overlay' },
             { id:'F-ugc-vid',label:'UGC video still' },
             { id:'F-social', label:'Social media screenshot' },
             { id:'F-meme',   label:'Meme / visual hook' },
             { id:'F-scene',  label:'Lifestyle / in-the-wild scene' },
           ],
-          W2: [ // Problem aware — name & agitate the pain
+          W2: [ // Problem aware, name & agitate the pain
             { id:'F-ugc-vid',label:'UGC video still' },
             { id:'F-hero',   label:'Hero image + headline overlay' },
             { id:'F-social', label:'Social media screenshot' },
             { id:'F-text',   label:'Text-message conversation' },
             { id:'F-list',   label:'Listicle overlay' },
           ],
-          W3: [ // Solution aware — comparison, category positioning
+          W3: [ // Solution aware, comparison, category positioning
             { id:'F-vs',     label:'Us vs. Them' },
             { id:'F-ba',     label:'Before / After' },
             { id:'F-myth',   label:'Myth vs. truth' },
             { id:'F-chart',  label:'Chart / data viz' },
             { id:'F-step',   label:'3-step explainer graphic' },
           ],
-          W4: [ // Product aware — show it, prove it
+          W4: [ // Product aware, show it, prove it
             { id:'F-prod',   label:'Product hero shot' },
             { id:'F-screen', label:'Product screenshot / UI' },
             { id:'F-test',   label:'Testimonial overlay' },
             { id:'F-stat',   label:'Stat block / big number' },
             { id:'F-ba',     label:'Before / After' },
           ],
-          W5: [ // Most aware — close with proof & offer
+          W5: [ // Most aware, close with proof & offer
             { id:'F-offer',  label:'Offer card + CTA' },
             { id:'F-test',   label:'Testimonial overlay' },
             { id:'F-review', label:'5-star review grid' },
@@ -666,7 +666,7 @@
           });
         }
 
-        // FORMATS (only if awareness selected) — formats vary by awareness level
+        // FORMATS (only if awareness selected), formats vary by awareness level
         if (state.awareness) {
           const wIdx = DATA.awareness.findIndex(x=>x.id===state.awareness);
           const aIdx = DATA.angles[state.persona].findIndex(x=>x.id===state.angle);
@@ -702,7 +702,7 @@
         updateChrome();
       }
 
-      // View transform state — both auto-focus and user pan/zoom write here
+      // View transform state, both auto-focus and user pan/zoom write here
       const view = { tx: 0, ty: 0, scale: 1 };
       let userAdjusted = false; // once user drags/zooms, stop auto-refocusing
 
@@ -762,7 +762,7 @@
         const boxRatio = rect.width / rect.height;
         let scale;
         if (boxRatio > vbRatio) {
-          // letterboxed left/right — height is the limit
+          // letterboxed left/right, height is the limit
           scale = 1000 / rect.height;
         } else {
           scale = 2400 / rect.width;
@@ -827,7 +827,7 @@
           view.ty = cyInBox - my * newScale;
           view.scale = newScale;
         } else {
-          // PAN — two-finger scroll / wheel
+          // PAN, two-finger scroll / wheel
           view.tx -= e.deltaX * k;
           view.ty -= e.deltaY * k;
         }
@@ -890,7 +890,7 @@
         else if (!state.awareness) n = 1 * 1 * 5 * 5; // 25
         else if (!state.format) n = 1 * 1 * 1 * 5; // 5
         else n = 1;
-        // Interpret running total as "reachable from here" — more intuitive.
+        // Interpret running total as "reachable from here", more intuitive.
         // But user-facing: "concepts unlocked" should grow as they commit. Let's flip it:
         // Depth selections COMMIT a path. Unlocked = product of all committed dimensions as they narrow.
         // Better: show how many distinct concepts live under the current selection.
@@ -1038,7 +1038,7 @@
     </style>
   </section>
 
-  <section data-label="07 Case study — Professional Builder" class="slide">
+  <section data-label="07 Case study, Professional Builder" class="slide">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>03</em>The Proof</div>
@@ -1049,7 +1049,7 @@
       </div>
 
       <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 36px; flex: 1; padding: 0 40px; min-height: 0;">
-        <!-- Concept A — lifestyle hero -->
+        <!-- Concept A, lifestyle hero -->
         <div class="ad-col">
           <div class="ad-card" style="padding: 0; overflow: hidden;">
             <img src="assets/tpb-concept1-lifestyle.png" alt="You're fully booked. So why aren't you making money?" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
@@ -1063,7 +1063,7 @@
           </div>
         </div>
 
-        <!-- Concept B — stat block -->
+        <!-- Concept B, stat block -->
         <div class="ad-col">
           <div class="ad-card" style="padding: 0; overflow: hidden;">
             <img src="assets/tpb-concept2-stats.png" alt="In 12 months, our members do this on average" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
@@ -1077,10 +1077,10 @@
           </div>
         </div>
 
-        <!-- Concept C — testimonial overlay -->
+        <!-- Concept C, testimonial overlay -->
         <div class="ad-col">
           <div class="ad-card" style="padding: 0; overflow: hidden;">
-            <img src="assets/tpb-concept3-testimonial.png" alt="We've hit a 25% gross margin — Brent Tamati" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
+            <img src="assets/tpb-concept3-testimonial.png" alt="We've hit a 25% gross margin, Brent Tamati" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
           </div>
           <div>
             <div style="display:flex; flex-direction:column; gap: 8px;">
@@ -1094,8 +1094,8 @@
     </div>
   </section>
 
-  <!-- ─── 07 · CASE STUDY — MOTT & BOW ────────────────────────── -->
-  <section data-label="08 Case study — Mott &amp; Bow" class="slide alt">
+  <!-- ─── 07 · CASE STUDY, MOTT & BOW ────────────────────────── -->
+  <section data-label="08 Case study, Mott &amp; Bow" class="slide alt">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>03</em>The Proof</div>
@@ -1106,10 +1106,10 @@
       </div>
 
       <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 36px; flex: 1; padding: 0 40px; min-height: 0;">
-        <!-- Concept A — heritage / craft -->
+        <!-- Concept A, heritage / craft -->
         <div class="ad-col">
           <div class="ad-card" style="padding: 0; overflow: hidden;">
-            <img src="assets/mb-concept1-heritage.jpg?v=2" alt="Four decades. One obsession. — Mott & Bow" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
+            <img src="assets/mb-concept1-heritage.jpg?v=2" alt="Four decades. One obsession., Mott & Bow" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
           </div>
           <div>
             <div style="display:flex; flex-direction:column; gap: 8px;">
@@ -1120,7 +1120,7 @@
           </div>
         </div>
 
-        <!-- Concept B — versatility / wardrobe grid -->
+        <!-- Concept B, versatility / wardrobe grid -->
         <div class="ad-col">
           <div class="ad-card" style="padding: 0; overflow: hidden;">
             <img src="assets/mb-concept2-versatile.jpg" alt="One jean. Every outfit. Core colors that anchor your entire wardrobe" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
@@ -1134,10 +1134,10 @@
           </div>
         </div>
 
-        <!-- Concept C — review / longevity -->
+        <!-- Concept C, review / longevity -->
         <div class="ad-col">
           <div class="ad-card" style="padding: 0; overflow: hidden;">
-            <img src="assets/mb-concept3-review.jpg" alt="Quality that outlasts trends — customer review" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
+            <img src="assets/mb-concept3-review.jpg" alt="Quality that outlasts trends, customer review" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
           </div>
           <div>
             <div style="display:flex; flex-direction:column; gap: 8px;">
@@ -1151,8 +1151,8 @@
     </div>
   </section>
 
-  <!-- ─── 08 · CASE STUDY — PAWABLE ──────────────────────────── -->
-  <section data-label="09 Case study — Pawable" class="slide">
+  <!-- ─── 08 · CASE STUDY, PAWABLE ──────────────────────────── -->
+  <section data-label="09 Case study, Pawable" class="slide">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>03</em>The Proof</div>
@@ -1163,7 +1163,7 @@
       </div>
 
       <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 36px; flex: 1; padding: 0 40px; min-height: 0;">
-        <!-- Concept A — problem agitation -->
+        <!-- Concept A, problem agitation -->
         <div class="ad-col">
           <div class="ad-card" style="padding: 0; overflow: hidden;">
             <img src="assets/pw-concept1-problem.png" alt="Your dog is slowing down. It's not just age." style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
@@ -1177,10 +1177,10 @@
           </div>
         </div>
 
-        <!-- Concept B — UGC testimonial / transformation -->
+        <!-- Concept B, UGC testimonial / transformation -->
         <div class="ad-col">
           <div class="ad-card" style="padding: 0; overflow: hidden;">
-            <img src="assets/pw-concept2-testimonial.png" alt="He's back to loving the beach and chasing his ball. — Christine C." style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
+            <img src="assets/pw-concept2-testimonial.png" alt="He's back to loving the beach and chasing his ball., Christine C." style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
           </div>
           <div>
             <div style="display:flex; flex-direction:column; gap: 8px;">
@@ -1191,7 +1191,7 @@
           </div>
         </div>
 
-        <!-- Concept C — stacked social proof -->
+        <!-- Concept C, stacked social proof -->
         <div class="ad-col">
           <div class="ad-card" style="padding: 0; overflow: hidden;">
             <img src="assets/pw-concept3-proof.png" alt="1,777 dog owners. 4.8 stars. 90-day money-back guarantee." style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
@@ -1208,23 +1208,23 @@
     </div>
   </section>
 
-  <!-- ─── 09 · THE REVEAL — ALL AI ────────────────────────────── -->
-  <!-- ─── 10 · THE AHA — CONTEXT-ENGINEERING PIPELINE ─────────── -->
+  <!-- ─── 09 · THE REVEAL, ALL AI ────────────────────────────── -->
+  <!-- ─── 10 · THE AHA, CONTEXT-ENGINEERING PIPELINE ─────────── -->
   <!-- ─── 11 · THE WORKFLOW ──────────────────────────────────── -->
-  <!-- ─── 10 · MADE BY AI (reveal after case studies) ─────────── -->
+  <!-- ─── 10 · MADE BY AI ────────────────────────────────────── -->
   <section data-label="10 Made by AI" class="slide glow-tr" style="position:relative;">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
-      <div class="right"><em>03</em>The Reveal</div>
+      <div class="right"><em>03</em>The Claim</div>
     </div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding: 0 140px;">
       <div style="max-width: 1600px;">
-        <div class="eyebrow-sm" style="margin-bottom: 36px;">The Reveal</div>
+        <div class="eyebrow-sm" style="margin-bottom: 36px;">The Unlock</div>
         <h1 class="h-lg" style="font-size: 132px; line-height: 0.98; margin: 0 0 44px;">
-          All of that &mdash; <em>done end-to-end by AI.</em>
+          All of this can be <em>done end-to-end</em> by AI.
         </h1>
         <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; max-width: 1200px; line-height: 1.35; margin: 0 0 56px;">
-          Research, matrix, briefs, statics. The whole pipeline. Zero humans in the loop on any of what you just saw.
+          Research, matrix, briefs, statics, the whole pipeline. What follows are real outputs from real brands.
         </p>
         <div style="display:flex; flex-wrap:wrap; gap: 14px 22px;">
           <div style="display:flex; align-items:center; gap: 12px; padding: 14px 22px; background: var(--ao-surface); border: 1px solid var(--ao-border); border-radius: 999px;">
@@ -1311,7 +1311,7 @@
       <div style="margin-bottom: 48px; max-width: 1500px;">
         <div class="eyebrow-sm" style="margin-bottom: 22px;">The Toolkit</div>
         <h2 class="h-sub" style="font-size: 76px;">Five tools. <em>In pipeline order.</em></h2>
-        <p class="body-md" style="color: var(--ao-muted); font-size: 24px; margin-top: 24px; max-width: 1300px;">Research, strategy, creative &mdash; then the two that can run the whole line. Pick where you want leverage, or commit to one that does it all.</p>
+        <p class="body-md" style="color: var(--ao-muted); font-size: 24px; margin-top: 24px; max-width: 1300px;">Research, strategy, creative, then the two that can run the whole line. Pick where you want leverage, or commit to one that does it all.</p>
       </div>
 
       <!-- Phase header strip -->
@@ -1342,7 +1342,7 @@
           <div>
             <div class="meta" style="color: var(--ao-accent); font-size: 11px; margin-bottom: 18px;">Strategy &middot; Briefing</div>
             <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 44px; color: var(--ao-text); margin: 0 0 14px; line-height: 1.05;">Poppy AI</h3>
-            <p class="body-sm" style="color: var(--ao-muted); font-size: 18px; line-height: 1.45;">Infinite canvas for creative thinking. Pull in reviews, ads, transcripts &mdash; connect them visually.</p>
+            <p class="body-sm" style="color: var(--ao-muted); font-size: 18px; line-height: 1.45;">Infinite canvas for creative thinking. Pull in reviews, ads, transcripts, connect them visually.</p>
           </div>
           <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--ao-border);">
             <div class="meta" style="color: var(--ao-dim); font-size: 10px; margin-bottom: 6px;">Best at</div>
@@ -1376,13 +1376,13 @@
           </div>
         </div>
 
-        <!-- 05 · Claude Code — HIGHLIGHTED: what Ad Oven builds -->
+        <!-- 05 · Claude Code, HIGHLIGHTED: what Ad Oven builds -->
         <div class="card" style="padding: 32px; display:flex; flex-direction:column; justify-content:space-between; border-color: var(--ao-accent); border-width: 2px; background: linear-gradient(165deg, rgba(249,115,22,.14), rgba(249,115,22,.04) 60%, var(--ao-surface)); box-shadow: 0 30px 80px rgba(249,115,22,.18); position: relative;">
           <div style="position: absolute; top: -14px; left: 24px; background: var(--ao-accent); color: #0a0a0a; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 800; padding: 7px 14px; border-radius: 100px;">What Ad Oven Builds</div>
           <div>
             <div class="meta" style="color: var(--ao-accent); font-size: 11px; margin-bottom: 18px;">Build Your Own</div>
             <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 44px; color: var(--ao-text); margin: 0 0 14px; line-height: 1.05;">Claude Code</h3>
-            <p class="body-sm" style="color: var(--ao-muted); font-size: 18px; line-height: 1.45;">A bespoke pipeline shaped to your brand. Agents, prompts, tools &mdash; versioned and owned by you.</p>
+            <p class="body-sm" style="color: var(--ao-muted); font-size: 18px; line-height: 1.45;">A bespoke pipeline shaped to your brand. Agents, prompts, tools, versioned and owned by you.</p>
           </div>
           <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(249,115,22,.3);">
             <div class="meta" style="color: var(--ao-dim); font-size: 10px; margin-bottom: 6px;">Best at</div>
@@ -1405,9 +1405,9 @@
         <h2 class="h-title" style="font-size: 128px; line-height: 0.95; margin: 0 0 32px;">Deep <em>Research</em>.</h2>
         <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">Claude and ChatGPT's agentic research modes. Replaces the &ldquo;stare at reviews for two hours&rdquo; phase with a fifteen-minute synthesis.</p>
         <div style="display:flex; flex-direction:column; gap: 18px;">
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Reads dozens of sources &mdash; reviews, forums, landing pages, press &mdash; in one pass.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Mines customer reviews for insights, golden nuggets, and key phrases &mdash; surfacing ad angles you'd never find on your own.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Citations on every claim &mdash; you can trace any insight back to its source.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Reads dozens of sources, reviews, forums, landing pages, press, in one pass.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Mines customer reviews for insights, golden nuggets, and key phrases, surfacing ad angles you'd never find on your own.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Citations on every claim, you can trace any insight back to its source.</p></div>
         </div>
       </div>
       <div class="card" style="padding: 0; aspect-ratio: 1 / 1; display:flex; flex-direction:column; overflow: hidden;">
@@ -1439,11 +1439,11 @@
       <div>
         <div class="eyebrow-sm" style="margin-bottom: 24px;">Strategy &middot; Ideation &middot; Briefing</div>
         <h2 class="h-title" style="font-size: 128px; line-height: 0.95; margin: 0 0 32px;">Poppy <em>AI</em>.</h2>
-        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">A canvas for thinking &mdash; not a chat. Drop in reviews, competitor ads, and transcripts, then let the AI connect dots across them.</p>
+        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">A canvas for thinking, not a chat. Drop in reviews, competitor ads, and transcripts, then let the AI connect dots across them.</p>
         <div style="display:flex; flex-direction:column; gap: 18px;">
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Spatial context &mdash; reference a dozen sources at once without copy-paste loops.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Spatial context, reference a dozen sources at once without copy-paste loops.</p></div>
           <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Brief templates that stay anchored to the raw evidence on the board.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Fast iteration &mdash; rearrange, branch, and compare concepts side by side.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Fast iteration, rearrange, branch, and compare concepts side by side.</p></div>
         </div>
       </div>
       <div class="card" style="padding: 0; aspect-ratio: 1 / 1; display:flex; flex-direction:column; overflow: hidden;">
@@ -1468,10 +1468,10 @@
       <div>
         <div class="eyebrow-sm" style="margin-bottom: 24px;">Creative Suite</div>
         <h2 class="h-title" style="font-size: 128px; line-height: 0.95; margin: 0 0 32px;"><em>Higgsfield</em>.</h2>
-        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">A full stack of image, video, and motion tools under one roof &mdash; when the bar is higher than &ldquo;good enough.&rdquo;</p>
+        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">A full stack of image, video, and motion tools under one roof, when the bar is higher than &ldquo;good enough.&rdquo;</p>
         <div style="display:flex; flex-direction:column; gap: 18px;">
           <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Character and product consistency across hundreds of variations.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Cinematic video controls &mdash; camera moves, lighting, pacing &mdash; without a shoot.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Cinematic video controls, camera moves, lighting, pacing, without a shoot.</p></div>
           <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Composites on-brand products into any scene, lit correctly.</p></div>
         </div>
       </div>
@@ -1499,7 +1499,7 @@
         <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">An autonomous agent that plans, executes, and delivers. Hand it a brief, come back to a matrix of finished statics.</p>
         <div style="display:flex; flex-direction:column; gap: 18px;">
           <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Chains research, matrix, copy, and image generation in one session.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Runs for hours &mdash; you check in, not babysit.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Runs for hours, you check in, not babysit.</p></div>
           <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">The closest thing to &ldquo;one prompt, ninety ads&rdquo; that exists today.</p></div>
         </div>
       </div>
@@ -1524,10 +1524,10 @@
       <div>
         <div class="eyebrow-sm" style="margin-bottom: 24px;">Build Your Own System &middot; What We Build</div>
         <h2 class="h-title" style="font-size: 128px; line-height: 0.95; margin: 0 0 32px;">Claude <em>Code</em>.</h2>
-        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">When off-the-shelf runs out of road. A pipeline shaped exactly to your brand &mdash; agents, prompts, tools, versioned and owned. <strong style="color: var(--ao-text);">This is what Ad Oven builds as a service.</strong></p>
+        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">When off-the-shelf runs out of road. A pipeline shaped exactly to your brand, agents, prompts, tools, versioned and owned. <strong style="color: var(--ao-text);">This is what Ad Oven builds as a service.</strong></p>
         <div style="display:flex; flex-direction:column; gap: 18px;">
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Encode your strategy in code &mdash; reproducible, shareable, tunable.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Wire in your own tools &mdash; DAM, ad platform, review scraper, Figma.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Encode your strategy in code, reproducible, shareable, tunable.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Wire in your own tools, DAM, ad platform, review scraper, Figma.</p></div>
           <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">The ceiling is the ceiling of an engineer, not a product roadmap.</p></div>
         </div>
       </div>
@@ -1553,10 +1553,10 @@
       <div>
         <div class="eyebrow-sm" style="margin-bottom: 22px;">Try It On Your Own Ads</div>
         <h2 class="h-title" style="font-size: 104px; line-height: 0.95; margin: 0 0 32px;">Audit <em>your</em> Meta ads.</h2>
-        <p class="body-lg" style="color: var(--ao-muted); font-size: 26px; line-height: 1.45; margin: 0 0 36px; max-width: 720px;">Before we build, point the framework at your own account. Diversity score across all five dimensions &mdash; same framework, your data.</p>
+        <p class="body-lg" style="color: var(--ao-muted); font-size: 26px; line-height: 1.45; margin: 0 0 36px; max-width: 720px;">Before we build, point the framework at your own account. Diversity score across all five dimensions, same framework, your data.</p>
         <div style="display:flex; flex-direction:column; gap: 14px;">
           <div style="display:flex; align-items:flex-start; gap: 14px;"><span class="flame-bullet" style="margin-top: 11px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 20px;">Scores concentration risk across product, persona, angle, awareness, and format.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 14px;"><span class="flame-bullet" style="margin-top: 11px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 20px;">Surfaces which cells of the matrix you're starving &mdash; and where to go next.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 14px;"><span class="flame-bullet" style="margin-top: 11px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 20px;">Surfaces which cells of the matrix you're starving, and where to go next.</p></div>
           <div style="display:flex; align-items:flex-start; gap: 14px;"><span class="flame-bullet" style="margin-top: 11px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 20px;">Runs against live spend. Five minutes, read-only.</p></div>
         </div>
       </div>
@@ -1590,7 +1590,7 @@
           <div class="eyebrow-sm" style="margin-bottom: 22px;">Follow Along</div>
           <h2 class="h-title" style="font-size: 104px; line-height: 0.95; margin: 0;">The <em>kit.</em></h2>
         </div>
-        <p class="body-md" style="color: var(--ao-muted); font-size: 22px; max-width: 520px; line-height: 1.45; margin: 0 0 10px;">Every prompt, skill, and reference we're about to use &mdash; click to download and run alongside.</p>
+        <p class="body-md" style="color: var(--ao-muted); font-size: 22px; max-width: 520px; line-height: 1.45; margin: 0 0 10px;">Every prompt, skill, and reference we're about to use, click to download and run alongside.</p>
       </div>
 
       <div style="display:grid; grid-template-columns: 1fr 1.6fr; gap: 32px; flex: 1; align-items: stretch;">
