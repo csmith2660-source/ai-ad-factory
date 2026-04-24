@@ -1,0 +1,137 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Ad Oven — Colors & Type
+   Dark editorial performance brand. Orange = fire. Serif for impact.
+   ───────────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap');
+
+:root {
+  /* ─── Backgrounds (depth through darkness) ──────────────────────────── */
+  --ao-bg:         #0a0c10;  /* page — deepest */
+  --ao-bg-alt:     #0f1219;  /* alternate section */
+  --ao-surface:    #161a24;  /* card / panel */
+  --ao-surface-hv: #1c2130;  /* hover / elevated */
+  --ao-border:     #1e2333;  /* default border */
+
+  /* ─── Text ──────────────────────────────────────────────────────────── */
+  --ao-text:       #e8eaf0;  /* primary body */
+  --ao-muted:      #8b90a0;  /* secondary / supporting */
+  --ao-dim:        #555b70;  /* tertiary / placeholder / eyebrow on dim */
+
+  /* ─── Accent (fire/energy — use sparingly) ──────────────────────────── */
+  --ao-accent:     #f97316;
+  --ao-accent-hv:  #fb923c;
+  --ao-accent-dim: rgba(249,115,22,.12);
+
+  /* ─── Status ────────────────────────────────────────────────────────── */
+  --ao-green:      #22c55e;
+  --ao-red:        #ef4444;
+
+  /* ─── Typography ────────────────────────────────────────────────────── */
+  --ao-serif:      'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --ao-sans:       'DM Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  /* ─── Semantic type roles ───────────────────────────────────────────── */
+  --ao-h1-size:    clamp(42px, 6vw, 72px);
+  --ao-h1-lh:      1.05;
+  --ao-h2-size:    clamp(32px, 4vw, 48px);
+  --ao-h2-lh:      1.15;
+  --ao-h3-size:    20px;
+  --ao-h3-weight:  600;
+  --ao-body-lg:    18px;
+  --ao-body:       15px;
+  --ao-body-sm:    14px;
+  --ao-caption:    12px;
+  --ao-eyebrow-ls: 2.5px;
+
+  /* ─── Layout ────────────────────────────────────────────────────────── */
+  --ao-max:        1120px;
+  --ao-gutter:     24px;
+
+  /* ─── Radii ─────────────────────────────────────────────────────────── */
+  --ao-radius-sm:  8px;
+  --ao-radius-md:  10px;
+  --ao-radius-lg:  16px;
+  --ao-radius-pill: 100px;
+
+  /* ─── Motion ────────────────────────────────────────────────────────── */
+  --ao-ease:       cubic-bezier(.4, 0, .2, 1);
+  --ao-dur-fast:   .2s;
+  --ao-dur-mid:    .4s;
+  --ao-dur-slow:   .6s;
+}
+
+/* ─── Light theme (optional, opt-in via [data-ao-theme="light"]) ──────── */
+[data-ao-theme="light"] {
+  --ao-bg:         #f8f9fc;
+  --ao-bg-alt:     #ffffff;
+  --ao-surface:    #ffffff;
+  --ao-surface-hv: #f0f1f5;
+  --ao-border:     #e2e4ea;
+  --ao-text:       #0f1219;
+  --ao-muted:      #555b70;
+  --ao-dim:        #8b90a0;
+  --ao-accent:     #ea580c;
+  --ao-accent-hv:  #f97316;
+  --ao-accent-dim: rgba(234,88,12,.08);
+}
+
+/* ─── Semantic element defaults ───────────────────────────────────────── */
+body {
+  font-family: var(--ao-sans);
+  background: var(--ao-bg);
+  color: var(--ao-text);
+  line-height: 1.6;
+  font-size: var(--ao-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: var(--ao-serif);
+  font-weight: 400;                /* DM Serif Display natural weight */
+  font-size: var(--ao-h1-size);
+  line-height: var(--ao-h1-lh);
+  letter-spacing: -0.01em;
+}
+h1 em { font-style: normal; color: var(--ao-accent); }
+
+h2 {
+  font-family: var(--ao-serif);
+  font-weight: 400;
+  font-size: var(--ao-h2-size);
+  line-height: var(--ao-h2-lh);
+}
+h2 em { font-style: normal; color: var(--ao-accent); }
+
+h3 {
+  font-family: var(--ao-sans);
+  font-size: var(--ao-h3-size);
+  font-weight: var(--ao-h3-weight);
+  line-height: 1.35;
+}
+
+p  { font-size: var(--ao-body); line-height: 1.6; color: var(--ao-text); }
+p.lead, .ao-lead { font-size: var(--ao-body-lg); line-height: 1.7; color: var(--ao-muted); }
+small, .ao-small { font-size: var(--ao-body-sm); color: var(--ao-muted); }
+.ao-caption { font-size: var(--ao-caption); color: var(--ao-dim); }
+
+.ao-eyebrow {
+  font-family: var(--ao-sans);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--ao-eyebrow-ls);
+  color: var(--ao-accent);
+}
+
+.ao-stat-num {
+  font-family: var(--ao-serif);
+  font-size: 42px;
+  color: var(--ao-accent);
+  line-height: 1;
+}
+
+code, pre, .ao-mono {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 13px;
+}
