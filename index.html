@@ -167,7 +167,7 @@
   "Before we build, your turn. I put the same framework into a tool you can run on your own account right now. Go to creative-diversity-audit.fly.dev, log in with 'audit' and 'Nashville2026', and connect your Meta ads. It scores your current spend across the same five dimensions and tells you which cells of the matrix you're starving. Read-only, five minutes. Leave it running in a tab while I build.",
   "Before I start building, grab the kit. Every prompt, skill, and reference I'm about to use is right here — click any of them to download. Step 01 is the deep research prompt. Step 02 is the skill file, Manus prompt, copywriting reference, and visual format library. Pull them up on your laptop and follow along.",
   "This is the part where I stop showing slides and start building. From a blank slate — the whole pipeline, live. Research, matrix, briefs, statics. Should take about [X] minutes. Questions hold until the end.",
-  "Open floor for questions. Quick plug: if you want this built for your brand — configured with your references, in a custom tool you actually own — book a call. We'll generate demo concepts for you ahead of the call so you can see what's possible."
+  "Open floor — what do you want to dig into? If you want to talk shop about what this looks like for your own brand after, grab me."
 ]
 </script>
   <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
@@ -1688,51 +1688,15 @@
     </div>
   </section>
 
-  <section data-label="21 Q&A + Book a Call" class="slide glow-tr" style="position:relative;">
+  <section data-label="21 Q&A" class="slide glow-tr" style="position:relative;">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>05</em>Close</div>
     </div>
-    <div style="flex:1; display:grid; grid-template-columns: 1.25fr 1fr; gap: 120px; padding: 100px 140px; align-items:center;">
-      <!-- LEFT: Q&A + pitch -->
-      <div>
-        <div class="eyebrow-sm" style="margin-bottom: 48px;">Open Floor</div>
-        <h2 class="h-title" style="font-size: 180px; line-height: 0.95; margin: 0 0 56px; letter-spacing: -3px;">Q <em>&</em> A.</h2>
-        <div style="padding: 36px 40px; background: var(--ao-surface); border: 1px solid var(--ao-border); border-radius: 20px; max-width: 720px;">
-          <div class="meta" style="color: var(--ao-accent); margin-bottom: 18px; font-size: 15px;">Want this for your brand?</div>
-          <p style="color: var(--ao-text); font-size: 24px; line-height: 1.4; margin: 0 0 20px; font-weight: 500;">We build custom AI ad systems tuned to your brand.</p>
-          <p style="color: var(--ao-muted); font-size: 20px; line-height: 1.45; margin: 0;">Book a call and we'll generate demo concepts for your brand — so you can see what's possible before you commit.</p>
-        </div>
-      </div>
-      <!-- RIGHT: QR -->
-      <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap: 32px;">
-        <div style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: 0 40px 120px rgba(229, 115, 70, 0.18);">
-          <div id="qr-cal" style="width: 440px; height: 440px; display:flex; align-items:center; justify-content:center;">
-            <div style="color:#aaa; font-size: 14px;">Loading…</div>
-          </div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-family: var(--ao-serif); font-size: 36px; color: var(--ao-text); margin-bottom: 10px;">Book a demo call</div>
-          <div style="font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--ao-muted);">calendly.com/colinelefantesmith/ad-oven-demo-call</div>
-        </div>
-      </div>
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding: 0 140px;">
+      <div class="eyebrow-sm" style="margin-bottom: 48px;">Open Floor</div>
+      <h2 class="h-title" style="font-size: 320px; line-height: 0.9; margin: 0; letter-spacing: -6px;">Q <em>&amp;</em> A.</h2>
     </div>
-    <script>
-      (function(){
-        var url = "https://calendly.com/colinelefantesmith/ad-oven-demo-call";
-        function render(){
-          if (!window.qrcode) { setTimeout(render, 80); return; }
-          var qr = window.qrcode(0, "M");
-          qr.addData(url);
-          qr.make();
-          var svg = qr.createSvgTag({ cellSize: 10, margin: 0, scalable: true });
-          var tgt = document.getElementById("qr-cal");
-          if (tgt) tgt.innerHTML = svg.replace("<svg", "<svg style=\"width:100%;height:100%;shape-rendering:crispEdges;\"");
-        }
-        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", render);
-        else render();
-      })();
-    </script>
   </section>
 
 
