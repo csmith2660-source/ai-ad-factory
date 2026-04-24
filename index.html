@@ -153,6 +153,7 @@
   "So what do I actually mean by creative diversity? Five dimensions. If you change any one of these, you've made a genuinely different ad. Product — the SKU, the offer. Persona — who you're talking to. Angle — the false belief you're challenging. Awareness — where they are in the journey. And format — how the ad actually looks. Change one, you have a new ad. Change two, you have a completely different one.",
   "When you cross-multiply those five dimensions, the math does something interesting. One product, two personas, three angles, three awareness levels, five formats — that's ninety unique ad concepts from a single SKU. This is the matrix. It's not a brainstorm; it's a combinatorial tree. And this is why AI is actually useful here — the tree is too big to fill by hand, but it's exactly the kind of structured generation LLMs are good at.",
   "Here's what six cells of the matrix look like filled in, for a real brand called The Professional Builder. Notice that every row has a different persona, a different angle, different awareness level, different format. None of these ads compete with each other. Meta's algorithm sees six distinct creative signals, not six variations of the same thing. This is the shape of a portfolio that scales.",
+  "Before we move on — if you want to try this framework on your own ads right now, I built a tool. Go to creative-diversity-audit.fly.dev, log in with 'audit' and 'Nashville2026', and connect your Meta account. It scores your current spend across the same five dimensions and tells you which cells of the matrix you're starving. Read-only, five minutes.",
   "This is the pivot. Everything you just saw — the matrix thinking, the creative diversity — all of it can be generated end-to-end by AI. Briefs, copy, images. Zero hands on any of it. The case studies you're about to see? Real brands, real outputs, no humans in the loop.",
   "Let me show you the matrix in action on The Professional Builder. Same product. Three completely different ads. Different persona, different angle, different format. The Stuck Builder gets a lifestyle hero — you're fully booked, so why aren't you making money? The Confident Operator gets a stat block showing the member cohort average — eight hours bought back, thirty-one percent profit lift. The Growth-Minded Owner gets a testimonial overlay with a named builder hitting twenty-five percent gross margin. Three ads, zero overlap, one product.",
   "A second brand, same mechanic. Mott & Bow sells one thing — heritage jeans — but three completely different ads. The Heritage Shopper gets the forty-years-of-craft product story. The Capsule Wardrobe Planner gets the one-jean-every-outfit grid. The Skeptical Buyer gets a two-year-wear review. Three personas, three angles, three formats, one product. The matrix holds up across categories.",
@@ -165,8 +166,8 @@
   "Manus. The first of two tools that can run the whole pipeline. It's an autonomous agent that plans, runs tools, and delivers. You hand it a brief, it comes back with research, matrix, copy, and statics. It's the closest off-the-shelf thing to 'one prompt, ninety ads' that actually works today.",
   "And Claude Code — the build-your-own path, and the one we build as a service for brands at Ad Oven. When off-the-shelf runs out of road, you build a pipeline shaped exactly to your brand. Your agents, your prompts, your tools — versioned, shareable, and owned by you. The ceiling stops being a product roadmap and starts being an engineer. This is what we're about to do live.",
   "This is the part where I stop showing slides and start building. From a blank slate — the whole pipeline, live. Research, matrix, briefs, statics. Should take about [X] minutes. Questions hold until the end.",
-  "Scan this QR and you'll have every prompt, doc, and template we just walked through. Go build.",
-  "Open floor for questions. Quick plug: if you want this built for your brand — configured with your references, in a custom tool you actually own — scan the QR and book a call. We'll generate demo concepts for you ahead of the call so you can see what's possible."
+  "Before I start building, grab the kit. Every prompt, skill, and reference I'm about to use is right here — click any of them to download. Step 01 is the deep research prompt. Step 02 is the skill file, Manus prompt, copywriting reference, and visual format library. Pull them up on your laptop and follow along.",
+  "Open floor for questions. Quick plug: if you want this built for your brand — configured with your references, in a custom tool you actually own — book a call. We'll generate demo concepts for you ahead of the call so you can see what's possible."
 ]
 </script>
   <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
@@ -1037,8 +1038,44 @@
     </style>
   </section>
 
-  <!-- ─── 06 · CASE STUDY — THE PROFESSIONAL BUILDER ─────────── -->
-  <section data-label="07 Made by AI" class="slide glow-tr" style="position:relative;">
+  <!-- ─── 07 · AUDIT YOUR ADS ────────────────────────────────── -->
+  <section data-label="07 Audit your ads" class="slide alt">
+    <div class="slide-chrome-top">
+      <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
+      <div class="right"><em>02</em>The Framework</div>
+    </div>
+    <div style="flex:1; display:grid; grid-template-columns: 1.1fr 1fr; gap: 100px; padding: 80px 140px 100px; align-items:center;">
+      <!-- LEFT: pitch -->
+      <div>
+        <div class="eyebrow-sm" style="margin-bottom: 22px;">Try It On Your Own Ads</div>
+        <h2 class="h-title" style="font-size: 104px; line-height: 0.95; margin: 0 0 32px;">Audit <em>your</em> Meta ads.</h2>
+        <p class="body-lg" style="color: var(--ao-muted); font-size: 26px; line-height: 1.45; margin: 0 0 36px; max-width: 720px;">Connect your Meta ad account and get a diversity score across all five dimensions. Same framework, your data.</p>
+        <div style="display:flex; flex-direction:column; gap: 14px;">
+          <div style="display:flex; align-items:flex-start; gap: 14px;"><span class="flame-bullet" style="margin-top: 11px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 20px;">Scores concentration risk across product, persona, angle, awareness, and format.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 14px;"><span class="flame-bullet" style="margin-top: 11px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 20px;">Surfaces which cells of the matrix you're starving &mdash; and where to go next.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 14px;"><span class="flame-bullet" style="margin-top: 11px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 20px;">Runs against live spend. Five minutes, read-only.</p></div>
+        </div>
+      </div>
+      <!-- RIGHT: credentials card -->
+      <div class="card" style="padding: 44px; border-color: rgba(249,115,22,.4); background: linear-gradient(165deg, rgba(249,115,22,.08), var(--ao-surface));">
+        <div class="meta" style="color: var(--ao-accent); font-size: 12px; margin-bottom: 18px;">Live Tool</div>
+        <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-bottom: 10px;">URL</div>
+        <a href="https://creative-diversity-audit.fly.dev" target="_blank" rel="noopener" style="display:block; font-family: var(--ao-serif); font-size: 38px; color: var(--ao-text); line-height: 1.1; text-decoration: none; word-break: break-all; margin-bottom: 36px;">creative-diversity-audit<span style="color: var(--ao-accent);">.fly.dev</span></a>
+
+        <div style="height: 1px; background: var(--ao-border); margin-bottom: 28px;"></div>
+
+        <div style="display:grid; grid-template-columns: auto 1fr; gap: 14px 24px; align-items:center;">
+          <div class="meta" style="color: var(--ao-dim); font-size: 11px;">Username</div>
+          <div style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 22px; color: var(--ao-text); background: rgba(0,0,0,.3); padding: 8px 14px; border-radius: 8px; border: 1px solid var(--ao-border); display: inline-block; width: max-content;">audit</div>
+          <div class="meta" style="color: var(--ao-dim); font-size: 11px;">Password</div>
+          <div style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 22px; color: var(--ao-text); background: rgba(0,0,0,.3); padding: 8px 14px; border-radius: 8px; border: 1px solid var(--ao-border); display: inline-block; width: max-content;">Nashville2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 08 · MADE BY AI ────────────────────────────────────── -->
+  <section data-label="08 Made by AI" class="slide glow-tr" style="position:relative;">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>03</em>The Claim</div>
@@ -1070,7 +1107,7 @@
     </div>
   </section>
 
-  <section data-label="08 Case study — Professional Builder" class="slide">
+  <section data-label="09 Case study — Professional Builder" class="slide">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>03</em>The Proof</div>
@@ -1127,7 +1164,7 @@
   </section>
 
   <!-- ─── 07 · CASE STUDY — MOTT & BOW ────────────────────────── -->
-  <section data-label="09 Case study — Mott & Bow" class="slide alt">
+  <section data-label="10 Case study — Mott &amp; Bow" class="slide alt">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>03</em>The Proof</div>
@@ -1184,7 +1221,7 @@
   </section>
 
   <!-- ─── 08 · CASE STUDY — PAWABLE ──────────────────────────── -->
-  <section data-label="10 Case study — Pawable" class="slide">
+  <section data-label="11 Case study — Pawable" class="slide">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>03</em>The Proof</div>
@@ -1243,7 +1280,7 @@
   <!-- ─── 09 · THE REVEAL — ALL AI ────────────────────────────── -->
   <!-- ─── 10 · THE AHA — CONTEXT-ENGINEERING PIPELINE ─────────── -->
   <!-- ─── 11 · THE WORKFLOW ──────────────────────────────────── -->
-  <section data-label="11 The workflow" class="slide alt">
+  <section data-label="12 The workflow" class="slide alt">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>04</em>The System</div>
@@ -1301,7 +1338,7 @@
   </section>
 
   <!-- ─── 12 · TOOLKIT LANDSCAPE ──────────────────────────────── -->
-  <section data-label="12 Toolkit landscape" class="slide glow-bl" style="position:relative;">
+  <section data-label="13 Toolkit landscape" class="slide glow-bl" style="position:relative;">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>04</em>The Toolkit</div>
@@ -1393,7 +1430,7 @@
   </section>
 
   <!-- ─── 13 · DEEP RESEARCH ──────────────────────────────────── -->
-  <section data-label="13 Deep Research" class="slide alt">
+  <section data-label="14 Deep Research" class="slide alt">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>04</em>The Toolkit &middot; 01 Research</div>
@@ -1429,7 +1466,7 @@
   </section>
 
   <!-- ─── 14 · POPPY AI ───────────────────────────────────────── -->
-  <section data-label="14 Poppy AI" class="slide">
+  <section data-label="15 Poppy AI" class="slide">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>04</em>The Toolkit &middot; 02 Strategy</div>
@@ -1458,7 +1495,7 @@
   </section>
 
   <!-- ─── 15 · HIGGSFIELD ─────────────────────────────────────── -->
-  <section data-label="15 Higgsfield" class="slide alt">
+  <section data-label="16 Higgsfield" class="slide alt">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>04</em>The Toolkit &middot; 03 Generate</div>
@@ -1486,7 +1523,7 @@
   </section>
 
   <!-- ─── 16 · MANUS ──────────────────────────────────────────── -->
-  <section data-label="16 Manus" class="slide">
+  <section data-label="17 Manus" class="slide">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>04</em>The Toolkit &middot; 04 Full pipeline</div>
@@ -1514,7 +1551,7 @@
   </section>
 
   <!-- ─── 17 · CLAUDE CODE ────────────────────────────────────── -->
-  <section data-label="17 Claude Code" class="slide alt glow-tr" style="position:relative;">
+  <section data-label="18 Claude Code" class="slide alt glow-tr" style="position:relative;">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>04</em>The Toolkit &middot; 05 Bespoke</div>
@@ -1542,7 +1579,7 @@
   </section>
 
   <!-- ─── 18 · LIVE DEMO KIT ──────────────────────────────────── -->
-  <section data-label="18 Live Demo Kit" class="slide alt" style="position:relative;">
+  <section data-label="19 Live Demo Kit" class="slide alt" style="position:relative;">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>04</em>Live Demo Kit</div>
@@ -1582,12 +1619,12 @@
             <div class="meta" style="color: var(--ao-accent); font-size: 13px;">Matrix &amp; Briefs &middot; Manus</div>
           </div>
           <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-            <a href="kit/files/skill.md" download style="text-decoration:none; color:inherit; display:flex; align-items:center; justify-content: space-between; gap: 14px; padding: 24px 28px; background: var(--ao-surface); border: 1px solid var(--ao-border); border-radius: 16px;">
+            <a href="kit/files/ad-factory-workflow.skill" download style="text-decoration:none; color:inherit; display:flex; align-items:center; justify-content: space-between; gap: 14px; padding: 24px 28px; background: var(--ao-surface); border: 1px solid var(--ao-border); border-radius: 16px;">
               <div style="display:flex; align-items:center; gap: 14px;">
                 <span class="flame-bullet"></span>
                 <div>
                   <div style="font-family: var(--ao-serif); font-size: 24px; color: var(--ao-text); line-height: 1.1;">Skill file</div>
-                  <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-top: 6px;">.md &middot; Download</div>
+                  <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-top: 6px;">.skill &middot; Download</div>
                 </div>
               </div>
               <span style="color: var(--ao-accent); font-family: var(--ao-serif); font-size: 30px; line-height: 1;">&darr;</span>
@@ -1602,12 +1639,12 @@
               </div>
               <span style="color: var(--ao-accent); font-family: var(--ao-serif); font-size: 30px; line-height: 1;">&darr;</span>
             </a>
-            <a href="kit/files/copywriting-reference.md" download style="text-decoration:none; color:inherit; display:flex; align-items:center; justify-content: space-between; gap: 14px; padding: 24px 28px; background: var(--ao-surface); border: 1px solid var(--ao-border); border-radius: 16px;">
+            <a href="kit/files/copywriting-reference.docx" download style="text-decoration:none; color:inherit; display:flex; align-items:center; justify-content: space-between; gap: 14px; padding: 24px 28px; background: var(--ao-surface); border: 1px solid var(--ao-border); border-radius: 16px;">
               <div style="display:flex; align-items:center; gap: 14px;">
                 <span class="flame-bullet"></span>
                 <div>
                   <div style="font-family: var(--ao-serif); font-size: 24px; color: var(--ao-text); line-height: 1.1;">Copywriting reference</div>
-                  <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-top: 6px;">.md &middot; Download</div>
+                  <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-top: 6px;">.docx &middot; Download</div>
                 </div>
               </div>
               <span style="color: var(--ao-accent); font-family: var(--ao-serif); font-size: 30px; line-height: 1;">&darr;</span>
@@ -1633,7 +1670,7 @@
     </div>
   </section>
 
-  <section data-label="19 Live Demo" class="slide glow-tr" style="position:relative;">
+  <section data-label="20 Live Demo" class="slide glow-tr" style="position:relative;">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>04</em>The System</div>
@@ -1651,7 +1688,7 @@
     </div>
   </section>
 
-  <section data-label="20 Q&A + Book a Call" class="slide glow-tr" style="position:relative;">
+  <section data-label="21 Q&A + Book a Call" class="slide glow-tr" style="position:relative;">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-transparent.png" alt="Ad Oven" />
       <div class="right"><em>05</em>Close</div>
