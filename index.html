@@ -158,12 +158,12 @@
   "A second brand, same mechanic. Mott & Bow sells one thing — heritage jeans — but three completely different ads. The Heritage Shopper gets the forty-years-of-craft product story. The Capsule Wardrobe Planner gets the one-jean-every-outfit grid. The Skeptical Buyer gets a two-year-wear review. Three personas, three angles, three formats, one product. The matrix holds up across categories.",
   "A third brand — Pawable, a collagen supplement for aging dogs. Same mechanic. Three concepts, three different ways in. The Worried Pet Parent sees the problem agitation — your dog is slowing down, it's not just age, it's collagen decline. The Hopeful Owner sees a transformation testimonial — Christine's dog back at the beach, five stars. The Skeptical Researcher sees the proof stack — 1,777 reviews, 4.8 stars, vet recommended, 90-day guarantee. Same supplement. Three completely different ways in.",
   "Here's the system. Five steps, each engineered with the right context. Research → Matrix → Briefs → Images → Ship. This is what we're about to run live.",
-  "Before the live build, a quick map of the landscape. Five tools, each strongest at a different slice of the pipeline. You don't need all of them — you need to know which slice you're trying to get leverage on.",
-  "Poppy AI. If you think visually, this is your strategy tool. An infinite canvas where you drop in reviews, competitor ads, transcripts, customer interviews — and the AI reasons across all of it at once. It's not a chat; it's a whiteboard with a brain. Best for the fuzzy, early part of the work: turning a pile of evidence into a sharp brief.",
-  "Deep Research. Claude and ChatGPT both ship agentic research modes now. You hand it a brand URL and a prompt, walk away for fifteen minutes, come back to a cited synthesis that would've taken a researcher a full day. This replaces the 'stare at Trustpilot for two hours' step. Best for step one of the pipeline: brand intelligence.",
-  "Manus. This is the one I'm most excited about for full-pipeline work. It's an autonomous agent that plans, runs tools, and delivers. You hand it a brief, it comes back with research, matrix, copy, and statics. It's the closest thing to 'one prompt, ninety ads' that actually works today. Best when you want the whole pipeline under one agent.",
-  "Higgsfield. When the bar is higher than 'good enough.' A creative suite covering image, video, and motion — character consistency across hundreds of variations, cinematic camera control, product compositing that actually looks lit. Best for the generation step when your brand needs production-value visuals, not just renders.",
-  "And Claude Code — the build-your-own path. When off-the-shelf tools run out of road, you build a pipeline shaped exactly to your brand. Your agents, your prompts, your tools — versioned, shareable, owned. The ceiling stops being a product roadmap and starts being an engineer. This is what we're about to do live.",
+  "Before the live build, a quick map of the landscape. Five tools, laid out in pipeline order — research, strategy, creative — then the two that can run the whole line. You don't need all of them. You need to know which slice you're trying to get leverage on. The one highlighted on the right — Claude Code — is what we build as a service for brands.",
+  "Start of the pipeline: Deep Research. Claude and ChatGPT both ship agentic research modes now. You hand it a brand URL and a prompt, walk away for fifteen minutes, come back to a cited synthesis that would've taken a researcher a full day. This replaces the 'stare at Trustpilot for two hours' step. Best for step one: brand intelligence.",
+  "Then strategy — Poppy AI. If you think visually, this is your briefing tool. An infinite canvas where you drop in reviews, competitor ads, transcripts, customer interviews — and the AI reasons across all of it at once. It's not a chat; it's a whiteboard with a brain. Best for the fuzzy middle step: turning a pile of evidence into a sharp brief.",
+  "Creative — Higgsfield. When the bar is higher than 'good enough.' A creative suite covering image, video, and motion — character consistency across hundreds of variations, cinematic camera control, product compositing that actually looks lit. Best for the generation step when your brand needs production-value visuals, not just renders.",
+  "Manus. The first of two tools that can run the whole pipeline. It's an autonomous agent that plans, runs tools, and delivers. You hand it a brief, it comes back with research, matrix, copy, and statics. It's the closest off-the-shelf thing to 'one prompt, ninety ads' that actually works today.",
+  "And Claude Code — the build-your-own path, and the one we build as a service for brands at Ad Oven. When off-the-shelf runs out of road, you build a pipeline shaped exactly to your brand. Your agents, your prompts, your tools — versioned, shareable, and owned by you. The ceiling stops being a product roadmap and starts being an engineer. This is what we're about to do live.",
   "This is the part where I stop showing slides and start building. From a blank slate — the whole pipeline, live. Research, matrix, briefs, statics. Should take about [X] minutes. Questions hold until the end.",
   "Scan this QR and you'll have every prompt, doc, and template we just walked through. Go build.",
   "Open floor for questions. Quick plug: if you want this built for your brand — configured with your references, in a custom tool you actually own — scan the QR and book a call. We'll generate demo concepts for you ahead of the call so you can see what's possible."
@@ -1319,27 +1319,23 @@
       <div class="right"><em>04</em>The Toolkit</div>
     </div>
     <div style="flex:1; display:flex; flex-direction:column; padding: 70px 120px 100px;">
-      <div style="margin-bottom: 56px; max-width: 1500px;">
+      <div style="margin-bottom: 48px; max-width: 1500px;">
         <div class="eyebrow-sm" style="margin-bottom: 22px;">The Toolkit</div>
-        <h2 class="h-sub" style="font-size: 76px;">Five tools. Pick <em>where you want leverage.</em></h2>
-        <p class="body-md" style="color: var(--ao-muted); font-size: 24px; margin-top: 24px; max-width: 1300px;">The same five-step system, five different stacks. Each tool is strongest at one slice of the pipeline &mdash; mix and match, or commit to one.</p>
+        <h2 class="h-sub" style="font-size: 76px;">Five tools. <em>In pipeline order.</em></h2>
+        <p class="body-md" style="color: var(--ao-muted); font-size: 24px; margin-top: 24px; max-width: 1300px;">Research, strategy, creative &mdash; then the two that can run the whole line. Pick where you want leverage, or commit to one that does it all.</p>
+      </div>
+
+      <!-- Phase header strip -->
+      <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 22px; margin-bottom: 16px;">
+        <div class="meta" style="color: var(--ao-dim); font-size: 11px;">01 &middot; Research</div>
+        <div class="meta" style="color: var(--ao-dim); font-size: 11px;">02 &middot; Strategy</div>
+        <div class="meta" style="color: var(--ao-dim); font-size: 11px;">03 &middot; Creative</div>
+        <div class="meta" style="color: var(--ao-dim); font-size: 11px;">Full pipeline</div>
+        <div class="meta" style="color: var(--ao-accent); font-size: 11px;">Full pipeline &middot; Bespoke</div>
       </div>
 
       <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 22px; flex: 1; align-items: stretch;">
-        <!-- Poppy -->
-        <div class="card" style="padding: 32px; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div class="meta" style="color: var(--ao-accent); font-size: 11px; margin-bottom: 18px;">Strategy &middot; Briefing</div>
-            <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 44px; color: var(--ao-text); margin: 0 0 14px; line-height: 1.05;">Poppy AI</h3>
-            <p class="body-sm" style="color: var(--ao-muted); font-size: 18px; line-height: 1.45;">Infinite canvas for creative thinking. Pull in reviews, ads, transcripts &mdash; connect them visually.</p>
-          </div>
-          <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--ao-border);">
-            <div class="meta" style="color: var(--ao-dim); font-size: 10px; margin-bottom: 6px;">Best at</div>
-            <div style="font-family: var(--ao-serif); font-size: 20px; color: var(--ao-text); line-height: 1.2;">Ideation &amp; briefs</div>
-          </div>
-        </div>
-
-        <!-- Deep Research -->
+        <!-- 01 · Deep Research -->
         <div class="card" style="padding: 32px; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div class="meta" style="color: var(--ao-accent); font-size: 11px; margin-bottom: 18px;">Research</div>
@@ -1352,20 +1348,20 @@
           </div>
         </div>
 
-        <!-- Manus -->
-        <div class="card" style="padding: 32px; display:flex; flex-direction:column; justify-content:space-between; border-color: rgba(249,115,22,.4); background: linear-gradient(165deg, rgba(249,115,22,.08), var(--ao-surface));">
+        <!-- 02 · Poppy AI -->
+        <div class="card" style="padding: 32px; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div class="meta" style="color: var(--ao-accent); font-size: 11px; margin-bottom: 18px;">End-to-End</div>
-            <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 44px; color: var(--ao-text); margin: 0 0 14px; line-height: 1.05;">Manus</h3>
-            <p class="body-sm" style="color: var(--ao-muted); font-size: 18px; line-height: 1.45;">Autonomous agent that plans, executes, and ships. Brief in, full matrix of statics out.</p>
+            <div class="meta" style="color: var(--ao-accent); font-size: 11px; margin-bottom: 18px;">Strategy &middot; Briefing</div>
+            <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 44px; color: var(--ao-text); margin: 0 0 14px; line-height: 1.05;">Poppy AI</h3>
+            <p class="body-sm" style="color: var(--ao-muted); font-size: 18px; line-height: 1.45;">Infinite canvas for creative thinking. Pull in reviews, ads, transcripts &mdash; connect them visually.</p>
           </div>
-          <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(249,115,22,.2);">
+          <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--ao-border);">
             <div class="meta" style="color: var(--ao-dim); font-size: 10px; margin-bottom: 6px;">Best at</div>
-            <div style="font-family: var(--ao-serif); font-size: 20px; color: var(--ao-text); line-height: 1.2;">Whole pipeline</div>
+            <div style="font-family: var(--ao-serif); font-size: 20px; color: var(--ao-text); line-height: 1.2;">Ideation &amp; briefs</div>
           </div>
         </div>
 
-        <!-- Higgsfield -->
+        <!-- 03 · Higgsfield -->
         <div class="card" style="padding: 32px; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div class="meta" style="color: var(--ao-accent); font-size: 11px; margin-bottom: 18px;">Creative Suite</div>
@@ -1378,14 +1374,28 @@
           </div>
         </div>
 
-        <!-- Claude Code -->
+        <!-- 04 · Manus -->
         <div class="card" style="padding: 32px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div class="meta" style="color: var(--ao-accent); font-size: 11px; margin-bottom: 18px;">End-to-End</div>
+            <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 44px; color: var(--ao-text); margin: 0 0 14px; line-height: 1.05;">Manus</h3>
+            <p class="body-sm" style="color: var(--ao-muted); font-size: 18px; line-height: 1.45;">Autonomous agent that plans, executes, and ships. Brief in, full matrix of statics out.</p>
+          </div>
+          <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--ao-border);">
+            <div class="meta" style="color: var(--ao-dim); font-size: 10px; margin-bottom: 6px;">Best at</div>
+            <div style="font-family: var(--ao-serif); font-size: 20px; color: var(--ao-text); line-height: 1.2;">Whole pipeline</div>
+          </div>
+        </div>
+
+        <!-- 05 · Claude Code — HIGHLIGHTED: what Ad Oven builds -->
+        <div class="card" style="padding: 32px; display:flex; flex-direction:column; justify-content:space-between; border-color: var(--ao-accent); border-width: 2px; background: linear-gradient(165deg, rgba(249,115,22,.14), rgba(249,115,22,.04) 60%, var(--ao-surface)); box-shadow: 0 30px 80px rgba(249,115,22,.18); position: relative;">
+          <div style="position: absolute; top: -14px; left: 24px; background: var(--ao-accent); color: #0a0a0a; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 800; padding: 7px 14px; border-radius: 100px;">What Ad Oven Builds</div>
           <div>
             <div class="meta" style="color: var(--ao-accent); font-size: 11px; margin-bottom: 18px;">Build Your Own</div>
             <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 44px; color: var(--ao-text); margin: 0 0 14px; line-height: 1.05;">Claude Code</h3>
-            <p class="body-sm" style="color: var(--ao-muted); font-size: 18px; line-height: 1.45;">Spin up a bespoke pipeline. Agents, prompts, and tools &mdash; versioned and owned by you.</p>
+            <p class="body-sm" style="color: var(--ao-muted); font-size: 18px; line-height: 1.45;">A bespoke pipeline shaped to your brand. Agents, prompts, tools &mdash; versioned and owned by you.</p>
           </div>
-          <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--ao-border);">
+          <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(249,115,22,.3);">
             <div class="meta" style="color: var(--ao-dim); font-size: 10px; margin-bottom: 6px;">Best at</div>
             <div style="font-family: var(--ao-serif); font-size: 20px; color: var(--ao-text); line-height: 1.2;">Bespoke systems</div>
           </div>
@@ -1394,11 +1404,41 @@
     </div>
   </section>
 
-  <!-- ─── 13 · POPPY AI ───────────────────────────────────────── -->
-  <section data-label="13 Poppy AI" class="slide alt">
+  <!-- ─── 13 · DEEP RESEARCH ──────────────────────────────────── -->
+  <section data-label="13 Deep Research" class="slide alt">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-dark.webp" alt="Ad Oven" />
-      <div class="right"><em>04</em>The Toolkit &middot; 01</div>
+      <div class="right"><em>04</em>The Toolkit &middot; 01 Research</div>
+    </div>
+    <div style="flex:1; display:grid; grid-template-columns: 1.25fr 1fr; gap: 100px; padding: 80px 140px 100px; align-items:center;">
+      <div>
+        <div class="eyebrow-sm" style="margin-bottom: 24px;">Research &middot; Synthesis</div>
+        <h2 class="h-title" style="font-size: 128px; line-height: 0.95; margin: 0 0 32px;">Deep <em>Research</em>.</h2>
+        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">Claude and ChatGPT's agentic research modes. Replaces the &ldquo;stare at reviews for two hours&rdquo; phase with a fifteen-minute synthesis.</p>
+        <div style="display:flex; flex-direction:column; gap: 18px;">
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Reads dozens of sources &mdash; reviews, forums, landing pages, press &mdash; in one pass.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Surfaces the language customers actually use &mdash; the raw material for angles.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Citations on every claim &mdash; you can trace any insight back to its source.</p></div>
+        </div>
+      </div>
+      <div class="card" style="padding: 48px; aspect-ratio: 1 / 1; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="meta" style="color: var(--ao-dim); font-size: 12px; margin-bottom: 22px;">Use It For</div>
+          <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 56px; color: var(--ao-text); margin: 0 0 24px; line-height: 1.05;">Getting <em style="font-style: normal; color: var(--ao-accent);">brand intelligence</em> that would take a week by hand.</h3>
+        </div>
+        <div style="padding-top: 24px; border-top: 1px solid var(--ao-border);">
+          <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-bottom: 8px;">In the pipeline</div>
+          <div style="font-family: var(--ao-serif); font-size: 28px; color: var(--ao-text); line-height: 1.15;"><em style="font-style: normal; color: var(--ao-accent);">Research</em> &rarr; Strategy &rarr; Creative</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 14 · POPPY AI ───────────────────────────────────────── -->
+  <section data-label="14 Poppy AI" class="slide">
+    <div class="slide-chrome-top">
+      <img src="assets/logo-horizontal-dark.webp" alt="Ad Oven" />
+      <div class="right"><em>04</em>The Toolkit &middot; 02 Strategy</div>
     </div>
     <div style="flex:1; display:grid; grid-template-columns: 1.25fr 1fr; gap: 100px; padding: 80px 140px 100px; align-items:center;">
       <div>
@@ -1418,77 +1458,17 @@
         </div>
         <div style="padding-top: 24px; border-top: 1px solid var(--ao-border);">
           <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-bottom: 8px;">In the pipeline</div>
-          <div style="font-family: var(--ao-serif); font-size: 28px; color: var(--ao-text); line-height: 1.15;">Research &rarr; <em style="font-style: normal; color: var(--ao-accent);">Strategy</em> &rarr; Briefs</div>
+          <div style="font-family: var(--ao-serif); font-size: 28px; color: var(--ao-text); line-height: 1.15;">Research &rarr; <em style="font-style: normal; color: var(--ao-accent);">Strategy</em> &rarr; Creative</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── 14 · DEEP RESEARCH ──────────────────────────────────── -->
-  <section data-label="14 Deep Research" class="slide">
+  <!-- ─── 15 · HIGGSFIELD ─────────────────────────────────────── -->
+  <section data-label="15 Higgsfield" class="slide alt">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-dark.webp" alt="Ad Oven" />
-      <div class="right"><em>04</em>The Toolkit &middot; 02</div>
-    </div>
-    <div style="flex:1; display:grid; grid-template-columns: 1.25fr 1fr; gap: 100px; padding: 80px 140px 100px; align-items:center;">
-      <div>
-        <div class="eyebrow-sm" style="margin-bottom: 24px;">Research &middot; Synthesis</div>
-        <h2 class="h-title" style="font-size: 128px; line-height: 0.95; margin: 0 0 32px;">Deep <em>Research</em>.</h2>
-        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">Claude and ChatGPT's agentic research modes. Replaces the &ldquo;stare at reviews for two hours&rdquo; phase with a fifteen-minute synthesis.</p>
-        <div style="display:flex; flex-direction:column; gap: 18px;">
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Reads dozens of sources &mdash; reviews, forums, landing pages, press &mdash; in one pass.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Surfaces the language customers actually use &mdash; the raw material for angles.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Citations on every claim &mdash; you can trace any insight back to its source.</p></div>
-        </div>
-      </div>
-      <div class="card" style="padding: 48px; aspect-ratio: 1 / 1; display:flex; flex-direction:column; justify-content:space-between; border-color: rgba(249,115,22,.4); background: linear-gradient(165deg, rgba(249,115,22,.08), var(--ao-surface));">
-        <div>
-          <div class="meta" style="color: var(--ao-dim); font-size: 12px; margin-bottom: 22px;">Use It For</div>
-          <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 56px; color: var(--ao-text); margin: 0 0 24px; line-height: 1.05;">Getting <em style="font-style: normal; color: var(--ao-accent);">brand intelligence</em> that would take a week by hand.</h3>
-        </div>
-        <div style="padding-top: 24px; border-top: 1px solid rgba(249,115,22,.2);">
-          <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-bottom: 8px;">In the pipeline</div>
-          <div style="font-family: var(--ao-serif); font-size: 28px; color: var(--ao-text); line-height: 1.15;"><em style="font-style: normal; color: var(--ao-accent);">Research</em> &rarr; Strategy &rarr; Briefs</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── 15 · MANUS ──────────────────────────────────────────── -->
-  <section data-label="15 Manus" class="slide alt">
-    <div class="slide-chrome-top">
-      <img src="assets/logo-horizontal-dark.webp" alt="Ad Oven" />
-      <div class="right"><em>04</em>The Toolkit &middot; 03</div>
-    </div>
-    <div style="flex:1; display:grid; grid-template-columns: 1.25fr 1fr; gap: 100px; padding: 80px 140px 100px; align-items:center;">
-      <div>
-        <div class="eyebrow-sm" style="margin-bottom: 24px;">End-to-End Workflows</div>
-        <h2 class="h-title" style="font-size: 128px; line-height: 0.95; margin: 0 0 32px;"><em>Manus</em>.</h2>
-        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">An autonomous agent that plans, executes, and delivers. Hand it a brief, come back to a matrix of finished statics.</p>
-        <div style="display:flex; flex-direction:column; gap: 18px;">
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Chains research, matrix, copy, and image generation in one session.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Runs for hours &mdash; you check in, not babysit.</p></div>
-          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">The closest thing to &ldquo;one prompt, ninety ads&rdquo; that exists today.</p></div>
-        </div>
-      </div>
-      <div class="card" style="padding: 48px; aspect-ratio: 1 / 1; display:flex; flex-direction:column; justify-content:space-between;">
-        <div>
-          <div class="meta" style="color: var(--ao-dim); font-size: 12px; margin-bottom: 22px;">Use It For</div>
-          <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 56px; color: var(--ao-text); margin: 0 0 24px; line-height: 1.05;">Running the <em style="font-style: normal; color: var(--ao-accent);">whole pipeline</em> without switching tools.</h3>
-        </div>
-        <div style="padding-top: 24px; border-top: 1px solid var(--ao-border);">
-          <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-bottom: 8px;">In the pipeline</div>
-          <div style="font-family: var(--ao-serif); font-size: 28px; color: var(--ao-text); line-height: 1.15;"><em style="font-style: normal; color: var(--ao-accent);">Research &rarr; Strategy &rarr; Generate</em></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── 16 · HIGGSFIELD ─────────────────────────────────────── -->
-  <section data-label="16 Higgsfield" class="slide">
-    <div class="slide-chrome-top">
-      <img src="assets/logo-horizontal-dark.webp" alt="Ad Oven" />
-      <div class="right"><em>04</em>The Toolkit &middot; 04</div>
+      <div class="right"><em>04</em>The Toolkit &middot; 03 Creative</div>
     </div>
     <div style="flex:1; display:grid; grid-template-columns: 1.25fr 1fr; gap: 100px; padding: 80px 140px 100px; align-items:center;">
       <div>
@@ -1508,7 +1488,37 @@
         </div>
         <div style="padding-top: 24px; border-top: 1px solid var(--ao-border);">
           <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-bottom: 8px;">In the pipeline</div>
-          <div style="font-family: var(--ao-serif); font-size: 28px; color: var(--ao-text); line-height: 1.15;">Briefs &rarr; <em style="font-style: normal; color: var(--ao-accent);">Generate</em> &rarr; Ship</div>
+          <div style="font-family: var(--ao-serif); font-size: 28px; color: var(--ao-text); line-height: 1.15;">Briefs &rarr; <em style="font-style: normal; color: var(--ao-accent);">Creative</em> &rarr; Ship</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 16 · MANUS ──────────────────────────────────────────── -->
+  <section data-label="16 Manus" class="slide">
+    <div class="slide-chrome-top">
+      <img src="assets/logo-horizontal-dark.webp" alt="Ad Oven" />
+      <div class="right"><em>04</em>The Toolkit &middot; 04 Full pipeline</div>
+    </div>
+    <div style="flex:1; display:grid; grid-template-columns: 1.25fr 1fr; gap: 100px; padding: 80px 140px 100px; align-items:center;">
+      <div>
+        <div class="eyebrow-sm" style="margin-bottom: 24px;">End-to-End Workflows</div>
+        <h2 class="h-title" style="font-size: 128px; line-height: 0.95; margin: 0 0 32px;"><em>Manus</em>.</h2>
+        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">An autonomous agent that plans, executes, and delivers. Hand it a brief, come back to a matrix of finished statics.</p>
+        <div style="display:flex; flex-direction:column; gap: 18px;">
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Chains research, matrix, copy, and image generation in one session.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Runs for hours &mdash; you check in, not babysit.</p></div>
+          <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">The closest thing to &ldquo;one prompt, ninety ads&rdquo; that exists today.</p></div>
+        </div>
+      </div>
+      <div class="card" style="padding: 48px; aspect-ratio: 1 / 1; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="meta" style="color: var(--ao-dim); font-size: 12px; margin-bottom: 22px;">Use It For</div>
+          <h3 style="font-family: var(--ao-serif); font-weight: 400; font-size: 56px; color: var(--ao-text); margin: 0 0 24px; line-height: 1.05;">Running the <em style="font-style: normal; color: var(--ao-accent);">whole pipeline</em> without switching tools.</h3>
+        </div>
+        <div style="padding-top: 24px; border-top: 1px solid var(--ao-border);">
+          <div class="meta" style="color: var(--ao-dim); font-size: 11px; margin-bottom: 8px;">In the pipeline</div>
+          <div style="font-family: var(--ao-serif); font-size: 28px; color: var(--ao-text); line-height: 1.15;"><em style="font-style: normal; color: var(--ao-accent);">Research &rarr; Strategy &rarr; Creative</em></div>
         </div>
       </div>
     </div>
@@ -1518,13 +1528,13 @@
   <section data-label="17 Claude Code" class="slide alt glow-tr" style="position:relative;">
     <div class="slide-chrome-top">
       <img src="assets/logo-horizontal-dark.webp" alt="Ad Oven" />
-      <div class="right"><em>04</em>The Toolkit &middot; 05</div>
+      <div class="right"><em>04</em>The Toolkit &middot; 05 Bespoke</div>
     </div>
     <div style="flex:1; display:grid; grid-template-columns: 1.25fr 1fr; gap: 100px; padding: 80px 140px 100px; align-items:center;">
       <div>
-        <div class="eyebrow-sm" style="margin-bottom: 24px;">Build Your Own System</div>
+        <div class="eyebrow-sm" style="margin-bottom: 24px;">Build Your Own System &middot; What We Build</div>
         <h2 class="h-title" style="font-size: 128px; line-height: 0.95; margin: 0 0 32px;">Claude <em>Code</em>.</h2>
-        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">When off-the-shelf runs out of road. Build a pipeline shaped exactly to your brand &mdash; agents, prompts, tools, versioned and owned.</p>
+        <p class="body-lg" style="color: var(--ao-muted); font-size: 28px; line-height: 1.45; margin: 0 0 40px; max-width: 780px;">When off-the-shelf runs out of road. A pipeline shaped exactly to your brand &mdash; agents, prompts, tools, versioned and owned. <strong style="color: var(--ao-text);">This is what Ad Oven builds as a service.</strong></p>
         <div style="display:flex; flex-direction:column; gap: 18px;">
           <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Encode your strategy in code &mdash; reproducible, shareable, tunable.</p></div>
           <div style="display:flex; align-items:flex-start; gap: 16px;"><span class="flame-bullet" style="margin-top: 12px;"></span><p class="body-md" style="color: var(--ao-text); font-size: 22px;">Wire in your own tools &mdash; DAM, ad platform, review scraper, Figma.</p></div>
